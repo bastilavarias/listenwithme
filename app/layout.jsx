@@ -1,6 +1,7 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
+import AppBar from '@/components/layout/AppBar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
                     defaultTheme="dark"
                     enableSystem
                 >
+                    <AppBar />
                     {children}
                 </ThemeProvider>
             </body>
