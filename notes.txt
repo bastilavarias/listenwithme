@@ -1,3 +1,5 @@
 References:
 https://github.com/gg-1414/music-visualizer/blob/master/script.js
 https://gina-lee.com/music-visualizer/
+https://blog.livekit.io/stream-music-over-webrtc-using-react-and-webaudio/
+https://turntable.fm/
