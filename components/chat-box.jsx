@@ -40,11 +40,11 @@ const MessageCard = ({ className }) => {
     );
 };
 
-const ChatBox = ({ className }) => {
+const ChatBox = ({ className, title = 'Lounge Chats' }) => {
     return (
         <Card className={cn('', className)}>
             <CardHeader>
-                <CardTitle>Lounge Chats</CardTitle>
+                <CardTitle>{title}</CardTitle>
                 <CardDescription>33 users are here</CardDescription>
             </CardHeader>
             <CardContent className="h-56 mb-2" style={{ overflow: 'auto' }}>

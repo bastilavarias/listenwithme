@@ -44,11 +44,11 @@ const PlayerCard = ({ className }) => {
     );
 };
 
-const MusicPlayer = ({ className }) => {
+const MusicPlayer = ({ className, title = 'Lounge Music' }) => {
     return (
         <Card className={cn('', className)}>
             <CardHeader>
-                <CardTitle>Lounge Music</CardTitle>
+                <CardTitle>{title}</CardTitle>
                 <CardDescription className="flex items-center">
                     <span className="mr-1">Listening to</span>
                     <span className="font-medium underline mr-1">
