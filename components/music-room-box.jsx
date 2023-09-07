@@ -7,7 +7,45 @@ import {
     CardHeader,
     CardTitle,
 } from '@/components/ui/card';
-import { Flame } from 'lucide-react';
+import { Flame, Headphones } from 'lucide-react';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
+
+const ListItem = ({ className }) => {
+    return (
+        <div
+            className={cn(
+                'flex items-center justify-between space-x-4',
+                className
+            )}
+        >
+            <div className="flex space-x-4">
+                <Avatar className="rounded-none w-20 h-auto">
+                    <AvatarImage src="/sample-cover.jpg" />
+                    <AvatarFallback className="rounded-none w-20 h-20">
+                        x
+                    </AvatarFallback>
+                </Avatar>
+                <div className="height-full flex flex-col justify-between">
+                    <h6 className="text-xl font-medium leading-none mb-1">
+                        Tunog Kalye
+                    </h6>
+                    <p className="text-md text-muted-foreground">
+                        Magasin by Eraserheads
+                    </p>
+                    <div className="flex items-center">
+                        <Headphones className="mr-1" />
+                        <small className="text-sm pt-1">
+                            4 Listeners by -{' '}
+                            <span className="underline">xoxo123</span>
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <Button>Listen now</Button>
+        </div>
+    );
+};
 
 const MusicRoomBox = ({ className }) => {
     return (
@@ -19,18 +57,9 @@ const MusicRoomBox = ({ className }) => {
                 </CardDescription>
             </CardHeader>
             <CardContent>
-                <div className="flex items-center justify-between space-x-4">
-                    <div className="flex items-center space-x-4">
-                        <div>
-                            <p className="text-sm font-medium leading-none">
-                                Sofia Davis
-                            </p>
-                            <p className="text-sm text-muted-foreground">
-                                m@example.com
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                {[1, 2, 3, 4, 5].map((n) => (
+                    <ListItem className="mb-5" key={n} />
+                ))}
             </CardContent>
         </Card>
     );
