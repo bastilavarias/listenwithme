@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import {
     Card,
@@ -10,6 +9,7 @@ import {
 import { Flame, Headphones } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const ListItem = ({ className }) => {
     return (
@@ -42,7 +42,9 @@ const ListItem = ({ className }) => {
                     </div>
                 </div>
             </div>
-            <Button>Listen now</Button>
+            <Button asChil>
+                <Link href="/listen/room-name">Listen now</Link>
+            </Button>
         </div>
     );
 };
@@ -53,11 +55,11 @@ const MusicRoomBox = ({ className }) => {
             <CardHeader>
                 <CardTitle>All Rooms</CardTitle>
                 <CardDescription className="flex items-center">
-                    What's Hot <Flame size={20} />
+                    What's Hot <Flame />
                 </CardDescription>
             </CardHeader>
             <CardContent>
-                {Array.from({ length: 8 }, (value, index) => index).map((n) => (
+                {Array.from({ length: 5 }, (value, index) => index).map((n) => (
                     <ListItem className="mb-5" key={n} />
                 ))}
             </CardContent>

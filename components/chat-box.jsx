@@ -40,15 +40,15 @@ const MessageCard = ({ className }) => {
     );
 };
 
-const ChatBox = ({ className, title = 'Lounge Chats' }) => {
+const ChatBox = ({ className, title = 'Lounge Chats', height = 0 }) => {
     return (
-        <Card className={cn('', className)}>
+        <Card className={cn('', className)} style={{ height: height || 500 }}>
             <CardHeader>
                 <CardTitle>{title}</CardTitle>
-                <CardDescription>33 users are here</CardDescription>
+                <CardDescription>69 users are here</CardDescription>
             </CardHeader>
-            <CardContent className="h-56 mb-2" style={{ overflow: 'auto' }}>
-                {[1, 2, 3].map((n) => (
+            <CardContent className="h-3/5 mb-2" style={{ overflow: 'auto' }}>
+                {Array.from({ length: 5 }, (value, index) => index).map((n) => (
                     <MessageCard key={n} />
                 ))}
             </CardContent>

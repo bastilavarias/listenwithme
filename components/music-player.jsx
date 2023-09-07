@@ -50,11 +50,11 @@ const MusicPlayer = ({ className, title = 'Lounge Music' }) => {
             <CardHeader>
                 <CardTitle>{title}</CardTitle>
                 <CardDescription className="flex items-center">
-                    <span className="mr-1">Listening to</span>
+                    <span className="mr-1">Played by</span>
                     <span className="font-medium underline mr-1">
                         bastilavarias
                     </span>
-                    <Disc3 className="animate-spin" size={20} />
+                    <Disc3 className="animate-spin" />
                 </CardDescription>
             </CardHeader>
             <CardContent>

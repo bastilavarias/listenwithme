@@ -1,5 +1,6 @@
 import { Headphones } from 'lucide-react';
 import GithubButton from '@/components/github-button';
+import Link from 'next/link';
 
 const AppBar = () => {
     return (
@@ -7,10 +8,10 @@ const AppBar = () => {
             <div className="flex justify-between items-center">
                 <div className="flex items-center">
                     <Headphones className="text-primary" />
-                    <h3 className="text-2xl font-bold tracking-wide">
+                    <Link href="/" className="text-2xl font-bold tracking-wide">
                         <span className="text-primary">listen</span>
                         withme
-                    </h3>
+                    </Link>
                     <Headphones />
                 </div>
                 <GithubButton />
