@@ -57,7 +57,7 @@ const MusicRoomBox = ({ className }) => {
                 </CardDescription>
             </CardHeader>
             <CardContent>
-                {[1, 2, 3, 4, 5].map((n) => (
+                {Array.from({ length: 8 }, (value, index) => index).map((n) => (
                     <ListItem className="mb-5" key={n} />
                 ))}
             </CardContent>
