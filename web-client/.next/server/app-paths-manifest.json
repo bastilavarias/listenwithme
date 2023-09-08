@@ -1,0 +1,4 @@
+{
+  "/page": "app/page.js",
+  "/listen/[slug]/page": "app/listen/[slug]/page.js"
+}
