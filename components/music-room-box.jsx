@@ -55,7 +55,7 @@ const MusicRoomBox = ({ className }) => {
             <CardHeader>
                 <CardTitle>All Rooms</CardTitle>
                 <CardDescription className="flex items-center">
-                    What's Hot <Flame />
+                    What's Hot <Flame  />
                 </CardDescription>
             </CardHeader>
             <CardContent>

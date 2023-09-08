@@ -54,7 +54,7 @@ const MusicPlayer = ({ className, title = 'Lounge Music' }) => {
                     <span className="font-medium underline mr-1">
                         bastilavarias
                     </span>
-                    <Disc3 className="animate-spin" />
+                    <Disc3 className="animate-spin"  />
                 </CardDescription>
             </CardHeader>
             <CardContent>

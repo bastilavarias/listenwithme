@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
                     enableSystem
                 >
                     <AppBar />
-                    <main className="container py-12">{children}</main>
+                    <main className="container py-4">{children}</main>
                 </ThemeProvider>
             </body>
         </html>
