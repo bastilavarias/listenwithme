@@ -1,3 +1,7 @@
 .idea
-web-client/node_modules
 web-client/.idea
+web-client/node_modules
+web-client/.next
+api/.idea
+api/vendor
+api/node_modules
