@@ -1,8 +1,14 @@
+'use client';
+
+import React from 'react';
 import { Headphones } from 'lucide-react';
-import GithubButton from '@/components/github-button';
 import Link from 'next/link';
+import GithubAuthDialog from '@/components/github-auth-dialog';
+import GithubButton from '@/components/github-button';
 
 const AppBar = () => {
+    const [open, setOpen] = React.useState(false);
+
     return (
         <header className="container py-10">
             <div className="flex justify-between items-center">
@@ -14,8 +20,10 @@ const AppBar = () => {
                     </Link>
                     <Headphones />
                 </div>
-                <GithubButton />
+                <GithubButton onClick={() => setOpen(!open)} />
             </div>
+
+            <GithubAuthDialog open={open} onClick={() => setOpen(!open)} />
         </header>
     );
 };

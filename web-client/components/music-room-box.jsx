@@ -42,7 +42,7 @@ const ListItem = ({ className }) => {
                     </div>
                 </div>
             </div>
-            <Button asChil>
+            <Button asChild>
                 <Link href="/listen/room-name">Listen now</Link>
             </Button>
         </div>
@@ -55,7 +55,7 @@ const MusicRoomBox = ({ className }) => {
             <CardHeader>
                 <CardTitle>All Rooms</CardTitle>
                 <CardDescription className="flex items-center">
-                    What's Hot <Flame  />
+                    What's Hot <Flame />
                 </CardDescription>
             </CardHeader>
             <CardContent>
